@@ -1,0 +1,131 @@
+.audience {
+  padding: 50px 15px;
+  background: $bacground-color-light-blue;
+  @include for-large-up {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    padding-top: 108px;
+  }
+
+  &__diteils {
+    @include for-large-up {
+      margin: 0 auto;
+      width: 555px;
+    }
+  }
+  &__subtitle {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 34px;
+    text-align: center;
+    color: $text-color-dark-grey;
+    display: block;
+    margin-bottom: 17px;
+    @include for-large-up {
+      margin-bottom: 24px;
+    }
+  }
+  &__title {
+    font-size: 40px;
+    line-height: 40px;
+    text-align: center;
+
+    letter-spacing: -0.357143px;
+    color: $text-color-dark-grey;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 18px;
+    @include for-large-up {
+      font-size: 56px;
+      line-height: 56px;
+      letter-spacing: -0.5px;
+      margin-bottom: 30px;
+    }
+  }
+  &__text {
+    font-size: 24px;
+    line-height: 34px;
+    text-align: center;
+    color: $text-color-dark-grey;
+    margin: 0;
+    padding: 0;
+  }
+  &__actions {
+    margin-top: 30px;
+    @include for-large-down {
+      display: flex;
+      flex-direction: column;
+    }
+    @include for-large-up {
+      margin-top: 30px;
+      margin-bottom: 0;
+      text-align: center;
+    }
+  }
+  &__actions-btn {
+    @include for-large-down {
+      width: 100%;
+    }
+  }
+  &__actions-btn:last-child {
+    color: #000000;
+    margin-top: 12px;
+    margin-left: 0;
+    @include for-large-up {
+      margin-top: 0;
+      margin-left: 10px;
+    }
+  }
+  &__options {
+    margin-top: 40px;
+    @include for-large-up {
+      display: flex;
+      margin: 111px 131px 110px 130px;
+      justify-content: space-between;
+    }
+  }
+  &__option {
+    max-width: 290px;
+    height: 300px;
+    background: $gradient-audience-block;
+    box-shadow: $box-shadow-audience-block;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    @include for-large-up {
+      max-width: 262px;
+      flex-grow: 1;
+    }
+  }
+  &__option:last-child {
+    margin-bottom: 0;
+  }
+  &__option:hover {
+    background: $bacground-color-hover-block;
+    box-shadow: $box-shadow-audience-block-hover;
+  }
+
+  &__img {
+    max-width: 100%;
+    align-self: start;
+    margin: auto;
+    margin-top: 22px;
+    margin-bottom: 0;
+  }
+  &__img-caption {
+    margin: 0 auto;
+    margin-top: 22px;
+    max-width: 250px;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 28px;
+    text-align: center;
+    color: $text-color-dark-grey;
+  }
+}
+.audience__option:hover .audience__img-caption {
+  color: $text-color-white;
+}
