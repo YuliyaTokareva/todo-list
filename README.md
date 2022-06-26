@@ -2,8 +2,6 @@ Foundation layout
 
 <h2><a href="https://yuliyatokareva.github.io/todo-list/" rel="nofollow">Site link</a></h2>
 
-Layout supports mobile (up-to-320) and desktop (to-1400) versions
-
 <h3>The tech stack is:</h3>
 <ul>
 <li><a href="https://en.wikipedia.org/wiki/HTML5" rel="nofollow">HTML5</a></li>
@@ -11,8 +9,9 @@ Layout supports mobile (up-to-320) and desktop (to-1400) versions
 <li><a href="https://en.wikipedia.org/wiki/CSS_Flexible_Box_Layout" rel="nofollow">Flexbox</a></li>
 <li><a href="https://sass-lang.com/" rel="nofollow">Sass (Scss)</a></li>
 <li><a href="https://en.bem.info/methodology/" rel="nofollow">BEM methodology</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Document_Object_Model" rel="nofollow">DOM (Document Object Model)</a></li>
 </ul>
 <h3>Author</h3>
 <ul>
-<li>Tokareva Yuliya</li>
+<li>Tokareva Yuliiya</li>
 </ul>
