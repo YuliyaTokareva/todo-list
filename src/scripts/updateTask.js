@@ -1,55 +1,36 @@
-import { renderTasks } from './renderer.js';
-import { getItem, setItem } from './storage.js';
-import { updateTask, getTasksList } from './tasksGateway.js';
+import { renderTasks } from "./renderer.js";
+import { getItem, setItem } from "./storage.js";
+import { updateTask, getTasksList, deleteTask } from "./tasksGateway.js";
 
-export const onToggleTask = e => {
-  //const getId = e.target.parentNode.dataset.id;
-  const isCheckbox = e.target.classList.contains('list__item-checkbox');
-  if (!isCheckbox) {
-    return;
-  }
+export const onToggleTask = (e) => {
+    const isCheckbox = e.target.classList.contains("list__item-checkbox");
+    const isDeleteBtn = e.target.classList.contains("list__item-delete-btn");
 
-  const taskId = e.target.parentNode.dataset.id;
-  const tasksList = getItem('tasksList');
-  console.log(taskId);
-  const { text, createdDate } = tasksList.find(task => task.id === taskId);
-  // { text, createdDate }
+    const taskId = e.target.parentNode.dataset.id;
+    if (isDeleteBtn) {
+        deleteTask(taskId);
+        renderTasks();
+    }
 
-  const done = e.target.checked;
-  const updatedTask = {
-    text,
-    createdDate,
-    done,
-    finishDate: done ? new Date().toISOString() : null,
-  };
+    const tasksList = getItem("tasksList");
+    console.log(e.target);
+    const { text, createdDate } = tasksList.find((task) => task.id === taskId);
 
-  updateTask(taskId, updatedTask)
-    .then(() => getTasksList())
-    .then(newTasksList => {
-      setItem('tasksList', newTasksList);
-      renderTasks();
-    });
+    const done = e.target.checked;
+    const updatedTask = {
+        text,
+        createdDate,
+        done,
+        finishDate: done ? new Date().toISOString() : null,
+    };
+
+    updateTask(taskId, updatedTask)
+        .then(() => getTasksList())
+        .then((newTasksList) => {
+            setItem("tasksList", newTasksList);
+            renderTasks();
+        });
 };
-
-//   const newTasksList = taskList.map(task => {
-//     if (task.id === e.target.parentNode.dataset.id) {
-//       console.log(e.target.parentNode.dataset.id);
-//       const done = e.target.checked;
-
-//       return {
-//         ...task,
-//         done,
-//         finishDate: done ? new Date().toISOString() : null,
-//       };
-//     }
-
-//     return task;
-//   });
-
-//   setItem('tasksList', newTasksList);
-//   console.log(getItem('tasksList'));
-//   renderTasks();
-// };
 //1. Prepare data
 //2. Update data in server
 //3. Save new to front-end storage
