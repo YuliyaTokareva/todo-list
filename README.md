@@ -1,6 +1,6 @@
 Foundation layout
 
-<h2><a href="https://yuliyatokareva.github.io/todo-list/" rel="nofollow">Site link</a></h2>
+<h2><a href="https://yuliyatokareva.github.io/project/" rel="nofollow">Site link</a></h2>
 
 <h3>The tech stack is:</h3>
 <ul>
