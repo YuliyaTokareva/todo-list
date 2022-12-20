@@ -1,9 +1,10 @@
 Foundation layout
 
-<h2><a href="https://yuliyatokareva.github.io/project/" rel="nofollow">Site link</a></h2>
+<h2><a href="https://yuliyatokareva.github.io/todo-list/" rel="nofollow">Site link</a></h2>
 
 <h3>The tech stack is:</h3>
 <ul>
+<li><a href="https://262.ecma-international.org/6.0" rel="nofollow">JS(ES6)</a></li>
 <li><a href="https://en.wikipedia.org/wiki/HTML5" rel="nofollow">HTML5</a></li>
 <li><a href="https://en.wikipedia.org/wiki/Cascading_Style_Sheets" rel="nofollow">CSS3</a></li>
 <li><a href="https://en.wikipedia.org/wiki/CSS_Flexible_Box_Layout" rel="nofollow">Flexbox</a></li>
